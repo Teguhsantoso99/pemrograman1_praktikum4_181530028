@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Praktikum 7</title>
+    </head>
+    <body>
+        <script language="JavaScript">
+            var vnama, vtujuan, vjumlahtiket;
+            var vht = 0.0;
+            var vsub = 0.0;
+            var vdiskon = 0.0;
+            var vtotal = 0.0;
+            function hitungtotal () {
+                vnama = (fform.inama.value);
+                vtujuan = (fform.itujuan.value);
+                vjumlahtiket = parseFloat (fform.ijumlah.value);
+                if (vtujuan=="Jakarta"){
+                    vht =100000;
+                }else if (vtujuan=="Cirebon") {
+                    vht =150000;
+                }else{
+                    vht =200000;
+                }
+                vsub = vjumlahtiket * vht;
+                if (fform.imember.checked==true) {
+                    vdiskon =0.10*vsub;
+                }else{
+                    vdiskon=0.0;
+                }
+                vtotal = vsub -vdiskon;
+                fform.otiket.value=eval(vht);
+                fform.osub.value=eval(vsub);
+                fform.odiskon.value=eval(vdiskon);
+                fform.ototal.value=eval(vtotal);
+            }
+        </script>
+        <form name="fform">
+        <table border="1" align="center" width="40%">
+            <tr>
+                <td width="100%" colspan="2"><h2 align="center">Trevel Bintang Abadi</h2></td>
+            </tr>
+            <tr>
+                <td width="50%">
+                    Nama<br>
+                    <input type="text" name="inama" style="width:100%">
+                    Tujuan<br>
+                    <select name="itujuan" style="width:100%">
+                        <option value="">-- Pilih --</option>
+                        <option value="Jakarta">Jakarta</option>
+                        <option value="Cirebon">Cirebon</option>
+                        <option value="Tasikmalaya">Tasikmalaya</option>
+                    </select><br>
+                        Jumlah Tiket<br>
+                        <input type="text" name="ijumlah" style="width:100%"><br>
+                        Member<br>
+                        <input type="checkbox" name="imember">Ya
+                </td>   
+                <td width="50%">
+                    Harga Tiket<br>
+                    <input type="text" name="otiket" style="width:100%"><br>
+                    Sub Total<br>
+                    <input type="text" name="osub" style="width:100%"><br>
+                    Diskon<br>
+                    <input type="text" name="odiskon" style="width:100%"><br>
+                    Total Bayar<br>
+                    <input type="text" name="ototal" style="width:100%">                           
+                </td>
+            </tr>
+            <tr>
+                <td width="100%" colspan="2">
+                    <center>
+                        <input type="button" value="Hitung" onclick="hitungtotal()">
+                        <input type="reset" value="Ulang">
+                    </center>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
+
+<!--
+    1. tag pembuka html
+    2. tag pembuka head
+    3. membuat title/judul dihead dengan nama Praktikum 7
+    4. tag penutup head
+    5. tag pembuka body
+    6. tag pembuka script/javascript
+    7. mendefinisikan variabel dengan nama vnama, vtujuan, vjumlahtiket
+    8. variabel dengan nama vht bernilai 0.0
+    9. variabel dengan nama vsub bernilai 0.0
+    10.variabel dengan nama vdiskon bernilai 0.0 
+    11.variabel dengan nama vtotal bernilai 0.0
+    12.membuat function dengan nama hitungtotal
+    13.nilai dari variabel vnama diambil dari form fform dengan elemen input inama
+    14.niali dari variabel vtujuan diambil dari form ffrom dengan elemen input itujuan
+    15.nilai dari variabel vjumlahtiket bernilai parseFloat yang diambil dari form fform dengan elemen input ijumlah
+    16.jika vtujuan bernilai "jakarta"
+    17.maka vht bernilai "100000"
+    18.jika kemungkinan pertama salah (else if) vtujuan bernilai "cirebon"
+    19.maka vht bernilai "150000"
+    20.jika kemungkingkinan keduanya salah (else)
+    21.maka vht bernilai "200000"
+    22.tag penutup else
+    23.nilai dari variabel vsub diambil dari nilai vjumlahtiket dikali (*) vht
+    24.jika form ffrom dengan elemen input imember bernilai cheched (benar)
+    25.maka nilai vdiskon diambil dari 0,10 dikali (*) vsub
+    26.jika kemungkinan pertama salah (else)
+    27.maka vdiskon bernilai 0,0
+    28.tag penutup else
+    29.nilai vtotal diambil dari vsub dikurangi (-) vdiskon
+    30.form ffrom dengan elemen input otiket bernilai eval (vht)
+    31.form ffrom dengan elemen input osub bernilai eval (vsub)
+    32.form ffrom dengan elemen input odiskon bernilai eval (vdiskon)
+    33.form ffrom dengan elemen input ototal bernilai eval (vtotal)
+    34.tag penutup function
+    35.tag penutup script/javascript
+    36.mendefinisikan form dengan nama "ffrom"
+    37.tag pembuka table dengan border 1 dengan rata tengah dan lebar 40%
+    38.tag pembuka tr/baris
+    39.tag pembuka td/kolom dengan lebar "100%" dengan menggabungkan 2 kolom, tag pembuka h2 dengan rata tengah (yang berisi teks Travel bintang abadi) tag penutup h2, tag penutup td/kolom
+    40.tag penutup tr
+    41.tag pembuka tr
+    42.tag pembuka td/kolom dengan lebar "50%"
+    43.membuat teks nama, lalu br/ganti baris(enter)
+    44.membuat input dengan type "text" dengan nama "inama" dan lebarnya 100%, ganti baris/enter 
+    45.membuat teks tujuan, tag br/ganti baris(enter)
+    46.tag pembuka select dengan nama "itujuan" dan lebarnya "100%", tag pembuka br/ganti baris/enter
+    47.tag pembuka option atau isi dari select yang berisi -- pilih --, tag penutup option
+    48.tag pembuka option atau isi dari select yang bernilai jakarta dengan isi jakarta, tag penutup option
+    49.tag pembuka option atau isi dari select yang bernilai cirebon dengan isi cirebon, tag penutup option
+    50.tag pembuka option atau isi dari select yang bernilai tasikmalaya dengan isi tasikmalaya, tag penutup option
+    51.tag penutup select, tag pembuka br/enter
+    52.penulisan jumlah tiket, tag  br/enter
+    53.tag pembuka input dengan type "text" dengan nama "ijumlah" dan style dengan lebarnya 100%, tag br/enter
+    54.membuat teks member, tag br/enter
+    55.membuat input dengan type "checkbox" dengan nama "imember" dan berisi teks Ya
+    56.tag penutup td
+    57.tag pembuka td dengan lebar "50%"
+    58.membuat teks harga tiket,lalu tag br/enter
+    59.membuat input dengan type "text" dengan nama "otiket" memiliki lebar 100%, lalu tag br/enter 
+    60.membuat teks sub total, lalu tag br untuk enter
+    61.membuat input dengan type "text" dengan nama "osub" dengan lebar 100%, tag pembuka br/enter
+    62.membuat teks diskon, lalu tag br untuk enter
+    63.membuat input dengan type "text" dengan nama "odiskon" dengan lebar 100%, tag pembuka br/enter
+    64.membuat teks total bayar, tag pembuka br/enter
+    65.membuat input dengan type "text" dengan nama "ototal" dan style dengan lebarnya 100%, tag pembuka br/enter
+    66.tag penutup td
+    67.tag penutup tr/baris
+    68.tar pembuka tr/baris
+    69.tag pembuka td dengan lebar "100%" dan menggabungkan 2 kolom
+    70.tag pembuka center/rata tengah
+    71.membuat input dengan type "button" yang bernilai "hitung" dengan onclick "hitungtotal"
+    72.membuat input dengan type "reset" yang bernilai "ulang"
+    73.tag penutup center/rata tengah
+    74.tag penutup td
+    75.tag penutup tr/baris
+    76.tag penutup table
+    77.tag penutup form 
+    78.tag penutup body
+    79.tag penutup html

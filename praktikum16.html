@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Praktikum 6</title>
+        <script>
+            var vid_user, vpassword, vlev_user;
+            function login() {
+                vid_user = (frlogin.txtiduser.value);
+                vpassword = (frlogin.txtpass.value);
+                vlev_user = (frlogin.cblevuser.value);
+                if(vid_user == "") {
+                    window.alert("ID. User belum diisi");
+                    frlogin.txtiduser.focus();
+                    return false;
+                }
+                if(vpassword == "") {
+                    window.alert("Password belum diisi");
+                    frlogin.txtpass.focus();
+                    return false;
+                }
+                if(vlev_user == "") {
+                    window.alert("Level User belum diisi");
+                    return false;
+                }else{
+                    window.alert("Anda login sebagai"+vlev_user);
+                }
+                return true;
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+        <form name="frlogin" method="post" action="" target="" onsubmit="return Login">
+                    <table align="center">
+                        <tr>
+                                <td>
+                                <fieldset>
+                                <legend>Login System</legend>
+                                <label for="txtiduser">ID. User</label><br>
+                                <input type="text" name="txtiduser" size="35" placeholder="ID.User"><br>
+                                <label for="txtpass">Password</label><br>
+                                <input type="password" name="txtpass" size="35" placeholder="Password"><br>
+                                <label for="cblevuser">Level User</label><br>
+                                <select name=cblevuser style="width:100%">
+                                    <option value="">-- Pilih Level User</option>
+                                    <option value="Administrator">Administrator</option>
+                                    <option value="User">User</option>
+                                </select><br><br>
+                                <input type="submit" value="Login">&nbsp;<input type="reset" value="Batal">
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+    </body>  
+</html>
+
+<!--1. Tag pembuka html.
+    2. Tag pembuka head.
+    3. Membuat title/judul dihead dengan nama Praktikum 6.
+    4. Tag pembuka script.
+    5. Membuat variabel dengan nama vid_user, vpassword, vlev_user
+    6. Membuat fungsi dengan nama login
+    7. vid_user mendapatkan nilai dari txtid_user dari form frlogin.
+    8. vpassword mendapatkan nilai dari txtpass dari form frlogin.
+    9. vlev_user mendapatkan nilai dari cblevuser dari form frlogin.
+    10.jika vid_user tidak memiliki nilai
+    11.maka akan keluar peringatan id user belum diisi
+    12.dan fokus akan tertuju ke txtiduser
+    13.  
+    14.tag penutup if
+    15.atau jika vpassword tidak memiliki nilai
+    16.maka akan keluar peringatan password belum diisi
+    17.dan fokus akan tertuju ke txtpass
+    18.
+    19.tag penutup if
+    20.atau jika vlev_user tidak memiliki nilai
+    21.maka akan keluar peringatan Level User belom diisi
+    22.
+    23.jika tidak
+    24.maka akan keluar peringatan anda sebagai spasi apa yang diisi di vlev_user
+    25.tag penutup else
+    26. 
+    27.tag penutup fungsi login
+    28.tag penutup script
+    29.tag penutup head
+    30.
+    31.tag pembuka body
+    32.
+    33.membuat form dengan nama frlogin dengan method post dan onsubmit return login
+    34.membuat table dengan posisi di tengah
+    35.tag pembuka tr 
+    36.tag pembuka td 
+    37.tag pembuka fieldset
+    38.membuat legend dengan nama loginsystem
+    39.membuat label untuk txtiduser dengan nama id.user 
+    40.dengan input type text dan nama txtiduser dengan ukuran 35 dan memiliki placeholder id.user
+    41.membuat label untuk txtpass dengan nama password 
+    42.dengan input type password dan nama password dengan ukuran 35 dan memiliki placeholder password
+    43.membuat label untuk cblevuser dengan nama level user 
+    44.membuat pilihan dengan nama cblevuser dengan ukuran 100%
+    45.dan memiliki opsi dengan nilai kosong dan berisi teks -- Pilih Level User -- 
+    46.opsi selanjutnya memiliki nilai administrator dan berisi teks administrator
+    47.opsi selanjutnya memiliki nilai user dan berisi teks user 
+    48.tag penutup select dan tag br untuk enter
+    49.membuat input dengan type submit dengan nilai Login &nbsp(pengganti spasi) ,membuat input dengan type reset dengan nilai Batal
+    50.tag penutup fieldset 
+    51.tag penutup td
+    52.tag penutup 
+    53.tag penutup table
+    54.tag penutup form
+    55.tag penutup body
+    56.tag penutup html
+-->
+
+     

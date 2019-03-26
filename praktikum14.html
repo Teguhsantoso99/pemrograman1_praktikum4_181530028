@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Praktikum 4</title>
+    </head>
+    <body>
+        <script language ="JavaScript">
+            function pilih() { 
+                var vprodi = (fform.cbprodi.value); 
+                fform.txtprodi.value = vprodi;
+            }
+        </script>
+
+        <form name="fform"> 
+            <h4> Penggunaan Object Select</h4><hr>
+            Prodi AKN Kajen :
+            <select name="cbprodi" size="1" onchange="pilih()">
+                <option value=""> -- Pilih -- </option>
+                <option value="D2-TI"> D2 Teknik Informatika </option>
+                <option value="D2-TM"> D2 Teknik Mesin </option>
+                <option value="D2-TK"> D2 Teknik Kimia </option>
+            </select>
+
+            <input type="reset" value="ulang">
+
+            Output Program Studi :
+           <input type="text" name="txtprodi" size="30">
+        </form>
+    </body>
+</html>
+
+<!--1. Tag pembuka html.
+    2. Tag pembuka head.
+    3. Membuat title/judul didalam head dengan nama praktikum 4.
+    4. Tag penutup head.
+    5. Tag pembuka body.
+    6. Membuat script dengan menggunakan bahasa JavaScript.
+    7. Membuat/mendefinisikan function yang bernama pilih.
+    8. Mendeklarasikan variabel vprodi yang mengambil nilai dari element input dengan
+       nama cbprodi dari form fform.
+    9. vprodi mengambil nilai dari element input dengan nama txtprodi dari form fform.
+    10.Tag penutup functiom.
+    11.Tag penutup dari script.
+    13.Membuat form dengan nama fform.
+    14.Membuat heading h4 dengan isi Penggunaan Object Select dan ada garis di bawahnya.
+    15.Membuat teks Prodi AKN Kajen.
+    16.Membuat pilihan dengan nama cbprodi yang memiliki ukuran 1 dan dengan onchange pilih.
+    17.dan memiliki opsi dengan nilai kosong dan berisi teks -- Pilih --.
+    18.Option berikutnya memiliki nilai D2-TI dan berisi teks D2 Teknik Informatika.
+    19.Option berikutnya memiliki nilai D2-TM dan berisi teks D2 Teknik Mesin.
+    20.Option berikutnya memiliki nilai D2-TK dan berisi teks D2 Teknik Kimia.
+    21.Tag penutup select.
+    23.Input yang berupa reset yang memiliki teks ulang.
+    25.Membuat teks Output Program Studi :
+    26.Input yang berupa teks dengan nama txtprodi dan memiliki ukuran 30.
+    27.Tag penutup form.
+    28.Tag Penutup body.
+    29.Tag penutup html. 

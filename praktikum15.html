@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Praktikum 5</title>
+        <script>
+            var mincar = 5;
+            pola_username=/^[a-zA-ZO-9\_\-] {8,100}$/;
+            pola_email=/^[a-ZA-ZO-9._-]+@[a-ZA-ZO-9.-]+\.[a-ZA-Z] {2,4}$/;
+
+            function validasi_input() {
+                if (frregistrasi.txtiduser.value == ""){
+                    alert("ID. User masih kosong!");
+                    frregistrasi.txtiduser.focus();
+                    return (false);
+                }
+                if (frregistrasi.txtiduser.value.lenght < mincar) {
+                    alert("Panjang ID. User Minimal 5 Karakter!");
+                    frregistrasi.txtiduser.focus();
+                    return (false);
+                }
+                if (!pola_username.test(frregistrasi.txtusername.value)) {
+                    alert ('Username minimal 8 karakter dan hanya boleh Huruf atau Angka!');
+                    frregistrasi.txtusername.focus();
+                    return false;
+                }
+                if (frregistrasi.txtpass.value == "") {
+                    alert ('Password harus diisi');
+                    frregistrasi.txtpass.focus();
+                    return false;
+                }
+                if (!pola_email.test(frregistrasi.txtemail.value)) {
+                    alert ('Penulisan Email tidak benar');
+                    frregistrasi.txtemail.focus();
+                    return false;
+                }
+                return (true);
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="frregistrasi" method="post" action="" target="" onsubmit="return validasi_input()">
+        <table align="center">
+            <tr>
+                    <td>
+                    <fieldset>
+                    <legend>Form Registrasi</legend>
+                    <label for="txtiduser">ID. User</label><br>
+                    <input type="text" name="txtiduser" size="35" placeholder="ID.User"><br>
+                    <label for="txtusername">Username</label><br>
+                    <input type="text" name="txtusername" size="35" placeholder="Username"><br>
+                    <label for="txtpass">Password</label><br>
+                    <input type="password" name="txtpass" size="35" placeholder="Password"><br>
+                    <label for="txtemail">Email</label><br>
+                    <input type="email" name="txtemail" size="35" placeholder="Email"><br>
+                    <hr>
+                    <input type="submit" value="Login">&nbsp;<input type="reset" value="Batal">
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        </form>   
+   </body>
+</html>
+
+<!--1. Tag pembuka html.
+    2. Tag pembuka head.
+    3. Membuat title/judul didalam head dengan nama Praktikum 5.
+    4. Tag pembuka script.
+    5. Membuat variabel mincar dengan nilai 5.
+    6. Mendeteksi pola_username dari sebuah string (huruf kecil a-z, A-Z,0-9)
+    7. Mendeteksi pola_email dari sebuah string (huruf kecil a-z, A-Z,0-9)
+    8. Mengecek session
+    9. Membuat function dengan nama validasi_input.
+    10.Jika txtifuser dari form frregistrasi bernilai kosong/tidak memiliki niali.
+    11.Maka akan keluar peringatan ID. User masih kosong!.
+    12.dan fokus akan kembali tertuju ke txtiduser.
+    13.Mengecek session
+    14.Tag penutup if.
+    15.Jika panjang nilai dari txtiduser dari form frregistrasi kurand dari mincar yang bernilai 5.
+    16.Maka akan keluar peringatan Panjang ID. User Minimal 5 Karakter!.
+    17.dan fokus akan kembali tertuju ke txtiduser.
+    18.Mengecek session
+    19.Tag penutup if.
+    20.Jika txtusername tidak sesuai dengan yang ada divariabel pola_user.
+    21.Maka akan muncul peringatan Username minimal 8 karakter dan hanya boleh Huruf atau Angka.
+    22.dan fokus akan kembali tertuju ke txtusername.
+    23.Mengecek session
+    24.Tag penutup if.
+    25.Jika txtpass dari form frregistrasi tidak memiliki nilai/kosong.
+    26.Maka akan muncul peringatan Password harus diisi.
+    27.dan fokus akan kembali tertuju ke txtpass.
+    28.Mengecek session
+    29.Tag penutup if.
+    30.Jika txtemail tidak sesuai dengan yang ada di variabel pola_email.
+    31.Maka akan muncul peringatan Penulisan Email tidak benar.
+    32.dan fokus email akan kembali ke txtemail.
+    33.Mengecek session
+    34.Tag penutup if.
+    35.Mengecek session
+    36.Tag penutup function validasi_input.
+    37.Tag penutup script.
+    38.Tag penutup head.
+    39.
+    40.Tag pembuka body.
+    41.Membuat form dengan nama frregistrasi dengan method post dan onsubmit return validasi_input
+    42.Membuat tabel dengan posisi ditengah.
+    43.Tag pembuka tr.
+    44.Tag pembuka td.
+    45.Tag pembuka fieldset.
+    46.Membuat legend dengan nama Form Registrasi.
+    47.Membuat label untuk txtiduser dengan nama ID. User.
+    48.dengan input tipe text dan nama txtiduser dengan ukuran 35 dan memiliki placeholder ID.User.
+    49.Membuat label untuk txtusername dengan nama Username.
+    50.dengan input tipe text dan nama txtusername dengan ukuran 35 dan memiliki placeholder Username.
+    51.Membuat label untuk txtpass dengan nama Password.
+    52.dengan input tipe text dan nama txtpass dengan ukuran 35 dan memiliki placeholder Password.
+    53.Membuat label untuk txtemail dengan nama Email.
+    54.dengan input tipe text dan nama txtemail dengan ukuran 35 dan memiliki placeholder Email.
+    55.Tag hr untuk membuat garis bawah.
+    56.Membuat input dengan tipe submit dengan nilai Login &nbsp(pengganti spasi),
+       membuat input dengan tipe reset dengan nilai Batal.
+    57.Tag penutup fieldset.
+    58.Tag penutup td.
+    59.Tag penutup tr.
+    60.Tag penutup table.
+    61.Tag penutup form.
+    62.Tag penutup body.
+    63.Tag penutup html.
